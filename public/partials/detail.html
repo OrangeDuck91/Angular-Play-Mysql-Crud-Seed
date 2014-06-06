@@ -1,0 +1,22 @@
+<div class="col-md-4">
+	<form name="detailForm" class="form-horizontal">
+		<fieldset>
+			<div class="control-group">
+			    <label class="control-label" for="inputClientId">Numéro Client</label>
+			    <div class="controls">
+			      <input type="number" id="inputClientId" ng-model="besoin.clientId">
+			    </div>
+		  	</div>
+			<div class="control-group">
+			    <label class="control-label" for="inputDesc">Description</label>
+			    <div class="controls">
+			      <textarea type="text" id="inputDesc" ng-model="besoin.description" placeholder="entrez une description" />
+			    </div>
+		  </div>
+		</fieldset>
+		<div>
+			 <button class="btn btn-primary" ng-click="save()">Save</button>
+			 <button class="btn btn-danger" ng-click="delete()">Delete</button>
+		</div>
+	</form>
+</div>

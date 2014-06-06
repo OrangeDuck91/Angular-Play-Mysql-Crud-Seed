@@ -1,0 +1,26 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+#REST API for Besoin
+#liste des besoins
+GET		/besoins					controllers.BesoinCtrl.listAll()
+
+#créer un besoin
+POST	/besoins					controllers.BesoinCtrl.create()
+
+# recupérer un besoin
+GET		/besoins/:id				controllers.BesoinCtrl.findById(id : Long)
+
+# mettre à jour un besoin
+PUT		/besoins/:id				controllers.BesoinCtrl.update(id: Long)
+
+#supprimer un besoin
+DELETE	/besoins/:id				controllers.BesoinCtrl.delete(id: Long)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

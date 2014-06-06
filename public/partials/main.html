@@ -1,0 +1,20 @@
+<div>
+	<a href="/needs/new"><i class="icon-plus-sign"></i> </a>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Numéro du Client</th>
+				<th>Description</th>
+				<th>Détails</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="besoin in besoins">
+			<td> {{besoin.clientId}}</td>
+			<td> {{besoin.description}}</td>
+			<td><a href="/needs/{{besoin.id}}"><i class="icon-pencil"> </a></td>
+		</tr>
+	
+		</tbody>
+	</table>
+</div>
