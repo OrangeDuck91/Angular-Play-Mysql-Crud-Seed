@@ -9,8 +9,8 @@ var app = angular.module('app', [
     'appServices'
 ]);
 
-app.config(['$routeProvider',
-    function($routeProvider) {
+app.config(['$routeProvider', '$locationProvider',
+    function($routeProvider, $locationProvider) {
         $routeProvider.
         when('/', {
             templateUrl: '/assets/partials/main.html',
@@ -27,12 +27,11 @@ app.config(['$routeProvider',
         otherwise({
             redirectTo: '/'
         });
+        
+        $locationProvider.html5Mode(true);
     }
 ]);
 
-app.config([
- 	"$locationProvider", function($locationProvider) {
-		return $locationProvider.html5Mode(true).hashPrefix("!"); // enable the new HTML5 routing and histoty API
-}]);
+
 
 app.constant("apiUrl", "http://localhost:9000\:9000/");
